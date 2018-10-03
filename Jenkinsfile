@@ -4,7 +4,7 @@ pipeline {
     stage('hello jenkins') {
       agent {
         docker {
-          image 'rcms_image_with_ftp3'
+          image 'node:docker-b2d24186d523d'
         }
 
       }
