@@ -4,7 +4,7 @@ pipeline {
     stage('hello jenkins') {
       agent {
         docker {
-          image 'docker-b2d24186d523d'
+          image 'gts-rcms-idac-artifact-rcms-docker-local.artifactory.swg-devops.com/images/rcms_with_ftp3'
         }
 
       }
