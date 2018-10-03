@@ -2,6 +2,12 @@ pipeline {
   agent any
   stages {
     stage('hello jenkins') {
+      agent {
+        docker {
+          image 'rcms_image_with_ftp3'
+        }
+
+      }
       environment {
         first = '1'
         second = '2'
