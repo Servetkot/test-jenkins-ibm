@@ -4,7 +4,7 @@ pipeline {
     stage('hello jenkins') {
       agent {
         docker {
-          image 'node:docker-b2d24186d523d'
+          image 'docker-b2d24186d523d'
         }
 
       }
