@@ -2,9 +2,15 @@ pipeline {
   agent any
   stages {
     stage('hello jenkins') {
+      environment {
+        first = '1'
+        second = '2'
+      }
       steps {
         echo 'hello'
-        sh 'echo "hello world"'
+        sh '''echo "hello world"
+echo "hello variable in ocean $first"
+echo "hello variable in ocean $second"'''
         input(message: 'Want to continue?', ok: 'yea')
       }
     }
